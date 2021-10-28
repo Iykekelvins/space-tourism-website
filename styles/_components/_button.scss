@@ -14,7 +14,7 @@
         content: "";
         background: $blur;
         backdrop-filter: blur(81.5485px);
-        position: absolute;
+        position: fixed;
         height: 400px;
         width: 400px;
         z-index: -1;
