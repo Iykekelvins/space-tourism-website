@@ -1,0 +1,19 @@
+/* SASS Variables */
+$white: hsl(0, 0%, 100%);
+$primary-color: #d0d6f9;
+$border-color: #383b4b;
+$secondary-color: #0b0d17;
+$blur: rgba(255, 255, 255, 0.04);
+$transition: all 0.3s linear;
+
+//Responsive Variables
+$breakpoints: (
+  phone: 320px,
+  phone2x: 480px,
+  phone3x: 768px,
+  tablet: 992px,
+  tablet2x: 1024px,
+  desktop: 1200px,
+  desktop2x: 1440px,
+  desktop3x: 1680px,
+);

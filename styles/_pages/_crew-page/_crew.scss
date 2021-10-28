@@ -1,0 +1,99 @@
+.crew {
+  position: relative;
+  z-index: 2;
+  &--container {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../../../assets/crew/background-crew-desktop.jpg) no-repeat
+      center center fixed;
+    background-size: cover;
+    z-index: -1;
+  }
+  &--info {
+    margin-bottom: 4rem;
+    &--left {
+      flex: 1;
+      h4 {
+        opacity: 0.5;
+        font-family: "Bellefair", serif;
+        margin-bottom: 3rem;
+      }
+    }
+    &--right {
+      img {
+        object-fit: contain;
+        bottom: -6rem;
+      }
+    }
+  }
+  &--tabs {
+    margin-top: 5rem;
+    li {
+      background: $white;
+      height: 15px;
+      width: 15px;
+      opacity: 0.17;
+      cursor: pointer;
+      transition: $transition;
+      border-radius: 50%;
+      margin-right: 0.5rem;
+    }
+  }
+  &--active {
+    opacity: 1 !important;
+  }
+}
+
+@include media("<=895px") {
+  .crew {
+    &--info {
+      flex-direction: column;
+      text-align: center;
+      &--right {
+        margin-top: 4rem;
+      }
+    }
+    &--tabs {
+      justify-content: center;
+    }
+  }
+}
+
+@include media("<=420px") {
+  .crew {
+    &--border {
+      width: 100%;
+      height: 1px;
+      background: $border-color;
+    }
+    &--info {
+      flex-direction: column-reverse;
+      &--left {
+        position: relative;
+        margin-top: 4rem;
+      }
+      &--right {
+        margin-top: unset;
+      }
+    }
+    &--tabs {
+      position: absolute;
+      top: -2rem;
+      margin-top: unset;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+    }
+    .container {
+      text-align: center;
+    }
+  }
+}

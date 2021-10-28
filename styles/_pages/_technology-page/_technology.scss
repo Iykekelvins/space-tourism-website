@@ -1,0 +1,125 @@
+.technology {
+  position: relative;
+  z-index: 2;
+  background-size: cover;
+  &--container {
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+    overflow: hidden;
+    h4 > span {
+      margin-bottom: 3rem;
+    }
+  }
+  &--tabs {
+    flex-direction: column;
+    margin-right: 2rem;
+    li {
+      margin-bottom: 1rem;
+      height: 80px;
+      width: 80px;
+      border-radius: 50%;
+      border: 1px solid $border-color;
+      cursor: pointer;
+      color: $white;
+      transition: $transition;
+      &:hover {
+        border-color: $white;
+      }
+    }
+  }
+  &--left {
+    flex: 1;
+    margin-right: 4rem;
+  }
+  &--right {
+    position: relative;
+    left: 2rem;
+  }
+  &--active {
+    background: $white;
+    color: $secondary-color !important;
+    border: none;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../../../assets/technology/background-technology-desktop.jpg)
+      no-repeat center center fixed;
+    background-size: cover;
+    z-index: -1;
+  }
+}
+
+@include media("<=1450px") {
+  .technology {
+    &--right {
+      position: absolute;
+      right: 0;
+      left: unset;
+    }
+    &--left {
+      flex: 0.55;
+    }
+  }
+}
+
+@include media("<=895px") {
+  .technology {
+    &--content {
+      flex-direction: column-reverse;
+    }
+    &--container {
+      width: 100%;
+      h4 > span {
+        margin-left: 3rem;
+      }
+    }
+    &--left {
+      text-align: center;
+      flex-direction: column;
+      margin-right: 0;
+      margin: 4rem 1rem;
+      p {
+        width: 450px;
+      }
+    }
+    &--right {
+      position: unset;
+    }
+    &--tabs {
+      flex-direction: row;
+      margin-right: 0;
+      li {
+        margin-right: 1rem;
+      }
+    }
+    &::after {
+      background: url(../../../assets/technology/background-technology-tablet.jpg)
+        no-repeat center center fixed;
+      background-size: cover;
+    }
+  }
+}
+
+@include media("<=480px") {
+  .technology {
+    &--container {
+      text-align: center;
+      p {
+        width: 100%;
+      }
+      h4 > span {
+        margin-left: 0;
+      }
+    }
+    &::after {
+      background: url(../../../assets/technology/background-technology-mobile.jpg)
+        no-repeat center center fixed;
+      background-size: cover;
+    }
+  }
+}
