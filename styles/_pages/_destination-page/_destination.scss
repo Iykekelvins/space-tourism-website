@@ -115,6 +115,9 @@
     }
     &--distance {
       flex-direction: column;
+      div {
+        margin-right: 0;
+      }
     }
   }
 }
