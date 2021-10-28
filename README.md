@@ -39,8 +39,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: https://space-tourism-website-iyke.netlify.app
-- Live Site URL: https://github.com/Iykekelvins/space-tourism-website
+- Solution URL: https://github.com/Iykekelvins/space-tourism-website
+- Live Site URL: https://space-tourism-website-iyke.netlify.app
 
 ## My process
 
